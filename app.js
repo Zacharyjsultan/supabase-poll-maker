@@ -1,3 +1,5 @@
+import { startNewPoll } from './fetch-utils.js';
+
 // import functions and grab DOM elements
 const createForm = document.getElementById('start-poll');
 const voteA = document.getElementById('votes-a');
@@ -49,6 +51,15 @@ endPoll.addEventListener('click', async () => {
         option_votes_a: optionVotesA,
         option_votes_b: optionVotesB,
     };
+    const resp = await startNewPoll(data);
+    question = '';
+    optionA = '';
+    optionB = '';
+
+    optionVotesA = 0;
+    optionVotesB = 0;
+
+    displayCurrentPoll();
 });
 
 
@@ -64,3 +75,5 @@ function displayCurrentPoll() {
     voteA.textContent = optionVotesA;
     voteB.textContent = optionVotesB;
 }
+
+// u still need to display the polls from SUPAbase
