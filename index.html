@@ -18,19 +18,63 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <img src="/assets/icon.png">
+        <h1>Web polls</h1>
     </header>
 
     <main>
         <section id="start">
             <h2>Start a Poll</h2>
-            <form id="start-poll">
-                <input type="text" name="" id="">
-                <input type="text">
-                <input type="text">
 
+            <form id="start-poll">
+
+                <label>
+                <input type="text" name="question-start">
+                 </label>
+                 
+            <label>
+                <input type="text" name="option-a">
+            </label>
+
+            <label>
+                <input type="text" name="option-b">
+            </label>
+            <button>Start the Poll</button>
             </form>
+
+            <section id="current-poll">
+
+                <h1>current poll</h1>
+                <h2 id="question-current">tt</h2>
+                <div id="options">
+                    <div class="option">
+                    <span id="option-a">tt</span>
+                    <button id="vote-a">3</button>
+                </div>
+                <div class="option">
+                    <span id="option-a">tt</span>
+                    <button id="vote-a">0</button>
+
+                </div>
+            </div>
+            <button id="end-poll">end poll</button>
+            </section>
+            <h2> past polls</h3>
+            <div id="poll-list">
+                <div class="poll-info">
+                    <h4>queschon</h4>
+                    <p>yus</p>
+                    <p>nou</p>
+                </div>
+                <div class="poll-info">
+                    <h4>queschin</h4>
+                    <p>yaz</p>
+                    <p>nie</p>
+                </div>
+            </div>
+
+            <section></section>
+
         </section>
 
     </main>

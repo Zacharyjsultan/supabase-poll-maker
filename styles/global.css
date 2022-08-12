@@ -10,6 +10,7 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-color: wheat;
 }
 
 header {
@@ -32,4 +33,21 @@ footer {
     display: flex;
     justify-content: flex-end;
     background-color: var(--footer-background);
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+img {
+    width: 90px;
+    height: 90px;
 }
