@@ -2,6 +2,7 @@
 const createForm = document.getElementById('start-poll');
 const voteA = document.getElementById('votes-a');
 const voteB = document.getElementById('votes-b');
+const endPoll = document.getElementById('end-poll');
 
 // let state
 let question = '';
@@ -26,9 +27,29 @@ createForm.addEventListener('submit', (e) => {
     displayCurrentPoll();
 });
 
+voteA.addEventListener('click', () => {
+    optionVotesA++;
+    // adding button function
+    voteA.textContent = optionVotesA;
+});
+
+voteB.addEventListener('click', () => {
+    optionVotesB++;
+    //subtracting button function
+    voteB.textContent = optionVotesB;
+});
+
+endPoll.addEventListener('click', async () => {
+  console.log('clackety');
+  const data = {
+
+  }
+});
+
+
 function displayCurrentPoll() {
 console.log(displayCurrentPoll);
-    const questionEl = document.getElementById('id');
+    const questionEl = document.getElementById('question');
     questionEl.textContent = question;
     const optionAEl = document.getElementById('option-a');
     optionAEl.textContent = optionA;
