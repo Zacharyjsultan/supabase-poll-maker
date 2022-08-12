@@ -1,4 +1,5 @@
-import { startNewPoll } from './fetch-utils.js';
+import { fetchPolls, startNewPoll } from './fetch-utils.js';
+import { renderPoll } from './render-utils.js';
 
 // import functions and grab DOM elements
 const createForm = document.getElementById('start-poll');
@@ -60,6 +61,7 @@ endPoll.addEventListener('click', async () => {
     optionVotesB = 0;
 
     displayCurrentPoll();
+    displayPolls();
 });
 
 
@@ -77,3 +79,16 @@ function displayCurrentPoll() {
 }
 
 // u still need to display the polls from SUPAbase
+
+async function displayPolls(){
+    const pollList = document.getElementById('poll-list');
+    pollList.textContent = '';
+    const polls = await fetchPolls();
+    for (let poll of polls) {
+        const div = renderPoll(poll);
+        pollList.append(div);
+    }
+
+}
+
+displayPolls();

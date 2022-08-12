@@ -13,3 +13,11 @@ export async function startNewPoll(data) {
     return resp.data;
 }
 
+// display polls in supabase export to fetch and render in js use(.select * for everything)
+export async function fetchPolls() {
+    const resp = await client.from('polls').select('*');
+    if (resp.error) {
+        throw new Error(resp.error.message);
+    }
+    return resp.data;
+}
