@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +18,67 @@
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <img src="/assets/icon.png">
+        <h1>power to the poll taker</h1>
     </header>
 
     <main>
+        <section id="start">
+            <h2>Start a Poll</h2>
+
+            <form id="start-poll">
+
+                <label>
+                    Poll Question:
+                <input type="text" name="question-start">
+                 </label>
+                 
+            <label>
+                Option A:
+                <input type="text" name="option-a">
+            </label>
+
+            <label>
+                Option B:
+                <input type="text" name="option-b">
+            </label>
+            <button>Start the Poll</button>
+            </form>
+
+            <section id="current-poll">
+
+                <h1>current poll</h1>
+                <h3 id="question">'Question'</h3>
+                <div id="options">
+                    <div class="option">
+                    <span id="option-a">'option a'</span>
+                    <button id="votes-a">0</button>
+                </div>
+                <div class="option">
+                    <span id="option-b">'option b'</span>
+                    <button id="votes-b">0</button>
+
+                </div>
+            </div>
+            <button id="end-poll">end poll</button>
+            </section>
+            <h2> past polls</h2>
+            <div id="poll-list">
+                <div class="poll-info">
+                    <h4>queschon:</h4>
+                    <p>votea: 0</p>
+                    <p>voteb: 0</p>
+                </div>
+                </div>
+            </div>
+
+            <section></section>
+
+        </section>
 
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2042 Software Alchemist</footer>
 
     <script type="module" src="app.js"></script>
 </body>
