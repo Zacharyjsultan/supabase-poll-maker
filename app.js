@@ -59,7 +59,7 @@ endPoll.addEventListener('click', async () => {
 
     optionVotesA = 0;
     optionVotesB = 0;
-
+    resp;
     displayCurrentPoll();
     displayPolls();
 });
