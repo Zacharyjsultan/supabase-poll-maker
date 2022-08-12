@@ -11,6 +11,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color: rgb(246, 233, 209);
+    text-align: center;
 }
 
 header {
@@ -19,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     background-color: var(--header-background);
+    
 }
 
 main {

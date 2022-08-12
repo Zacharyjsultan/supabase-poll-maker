@@ -40,15 +40,20 @@ voteB.addEventListener('click', () => {
 });
 
 endPoll.addEventListener('click', async () => {
-  console.log('clackety');
-  const data = {
-
-  }
+    console.log('clackety');
+   // data from supabase transmit to javabase
+    const data = {
+        question,
+        option_a: optionA,
+        option_b: optionB,
+        option_votes_a: optionVotesA,
+        option_votes_b: optionVotesB,
+    };
 });
 
 
 function displayCurrentPoll() {
-console.log(displayCurrentPoll);
+    console.log(displayCurrentPoll);
     const questionEl = document.getElementById('question');
     questionEl.textContent = question;
     const optionAEl = document.getElementById('option-a');
